@@ -6,8 +6,6 @@
         {
             super(inst);
 
-            console.log(inst)
-
             const dummyAlternatives = [
             {
                 text: 'blu<b>e</b>',
@@ -48,7 +46,7 @@
 
             this.propagateQuestions = (rawQuestions) => {
                 this.rawQuestions = rawQuestions;
-                splitStems(rawQuestions);
+                this.splitStems(rawQuestions);
 
                 if (rawQuestions.length === 0)
                 {
@@ -59,14 +57,11 @@
             }
 
             this.LoLApi = async(messageName, payloadObj) => {
-                console.log('posting to dom', messageName, payloadObj)
-                console.log(this.PostToDOM);
-                const resp = await this.PostToDOMAsync('*',
+                parent.postMessage(
                 {
                     message: messageName,
                     payload: JSON.stringify(payloadObj)
-                });
-                console.log('resp', resp);
+                }, '*');
             }
 
             this.langData = {
@@ -79,7 +74,7 @@
             this.currentQuestionIndex = 0;
             this.currentQuestion = dummyQuestion;
 
-            this.AddDOMMessageHandler("message", (msg) => {
+            window.addEventListener("message", (msg) => {
                 console.log('message received', msg)
 
                 const
