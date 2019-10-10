@@ -1,0 +1,281 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for LolV2 Plugin",
+  "text": {
+    "plugins": {
+      "lolv2": {
+        "name": "LolV2",
+        "description": "Legends of Learning Gameframe API for Construct 3",
+        "help-url": "https://github.com/armandoalonso/c3IDE",
+        "properties": {},
+        "aceCategories": {
+          "lifecycle": "Lifecycle",
+          "general": "General",
+          "questions": "Questions",
+          "speak": "Speak",
+          "audio": "Audio",
+          "payloads": "Payloads",
+          "language": "Language"
+        },
+        "conditions": {
+          "language-data-received": {
+            "list-name": "Language Data Received",
+            "display-text": "On <b>Language</b>",
+            "description": "Language loaded from server, store it in a dictionary"
+          },
+          "questions-data-received": {
+            "list-name": "Questions Data Received",
+            "display-text": "On <b>Questions</b>.",
+            "description": "Questions have been received from the server."
+          },
+          "game-paused": {
+            "list-name": "Game Paused",
+            "display-text": "On <b>Pause</b>.",
+            "description": "LOL Platfrom has requested pause."
+          },
+          "game-resumed": {
+            "list-name": "Game Resumed",
+            "display-text": "On <b>Resume</b>.",
+            "description": "LOL Platform has requested resume."
+          }
+        },
+        "actions": {
+          "load-progress": {
+            "list-name": "Load Progress",
+            "display-text": "Load progress {0}.",
+            "description": "Value between 0.0 and 1.0. Let's LoL and users see how much progress has loaded",
+            "params": {
+              "load-progress": {
+                "name": "Load Progress",
+                "desc": "0.0 to 1.0"
+              }
+            }
+          },
+          "complete-game": {
+            "list-name": "Complete Game",
+            "display-text": "Game is complete",
+            "description": "LoL Platform will close the game and record stats"
+          },
+          "progress": {
+            "list-name": "Progress",
+            "display-text": "Submit progress {0} of {1}. Score: {2}",
+            "description": "LoL wants about 15 progress reports during game, minimum of 8.",
+            "params": {
+              "progress": {
+                "name": "Progress",
+                "desc": "Progress, should only increase, and never exceed max progress."
+              },
+              "max-progress": {
+                "name": "Max Progress",
+                "desc": "Max Progress."
+              },
+              "score": {
+                "name": "Score",
+                "desc": "A score if you want."
+              }
+            }
+          },
+          "answer-question": {
+            "list-name": "Answer Question",
+            "display-text": "Submit answer {0}",
+            "description": "Submit answer to the current question.",
+            "params": {
+              "answer-id": {
+                "name": "Answer Id",
+                "desc": "The 'alternative id' user chose."
+              }
+            }
+          },
+          "speak-questions": {
+            "list-name": "Speak Questions",
+            "display-text": "Speak Current Question {0}",
+            "description": "Speak the current question.",
+            "params": {
+              "question-id": {
+                "name": "Question Id",
+                "desc": "The 'question id' of the question to speak."
+              }
+            }
+          },
+          "speak-answers": {
+            "list-name": "Speak Answers",
+            "display-text": "Speak alternative text {0}",
+            "description": "Speak the alternatives.",
+            "params": {
+              "answer-id": {
+                "name": "Answer Id",
+                "desc": "The 'alternative id' of the answer to speak."
+              }
+            }
+          },
+          "speak-question-and-answers": {
+            "list-name": "Speak Question And Answers",
+            "display-text": "Speak Current Question and Answers {0}",
+            "description": "Speak answers and question (alternatives).",
+            "params": {
+              "question-id": {
+                "name": "Question Id",
+                "desc": "The 'question id' of the question to speak."
+              }
+            }
+          },
+          "speak-text": {
+            "list-name": "Speak Text",
+            "display-text": "Speak text key {0}",
+            "description": "Speak arbitrary text {0}.",
+            "params": {
+              "text-key": {
+                "name": "Text Key",
+                "desc": "Enter the name key of a string to speak."
+              }
+            }
+          },
+          "play-sound": {
+            "list-name": "Play Sound",
+            "display-text": "Play the sound {0}, looping {1} background {2}.",
+            "description": "Play sound {0}, looping {1} background {2}.",
+            "params": {
+              "background": {
+                "name": "Background",
+                "desc": "Should fade when other audio plays",
+                "items": {
+                  "true": "True",
+                  "false": "False"
+                }
+              },
+              "looping": {
+                "name": "Looping",
+                "desc": "Looping the audio",
+                "items": {
+                  "true": "True",
+                  "false": "False"
+                }
+              },
+              "filename": {
+                "name": "Filename",
+                "desc": "Path and name of file to play."
+              }
+            }
+          },
+          "stop-sound": {
+            "list-name": "Stop Sound",
+            "display-text": "Stop sound {0} from playing",
+            "description": "Stop sound {0} from playing.",
+            "params": {
+              "filename": {
+                "name": "Filename",
+                "desc": "Sound to stop playing."
+              }
+            }
+          },
+          "configure-sound": {
+            "list-name": "Configure Sound",
+            "display-text": "Configure sound {0} volume, {1}, {2}",
+            "description": "Configure Sound {0} volume.",
+            "params": {
+              "fade": {
+                "name": "Fade",
+                "desc": "I don't know yet"
+              },
+              "background": {
+                "name": "Background",
+                "desc": "Background volume"
+              },
+              "foreground": {
+                "name": "Foreground",
+                "desc": "Foreground volume"
+              }
+            }
+          },
+          "game-is-ready": {
+            "list-name": "Game Is Ready",
+            "display-text": "gameIsReady: {0}, {1}",
+            "description": "Tell LoL Platform the game is ready to receive messages.",
+            "params": {
+              "resolution": {
+                "name": "Resolution",
+                "desc": "Resolution"
+              },
+              "aspect-ratio": {
+                "name": "Aspect Ratio",
+                "desc": "Aspect ratio"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "get-language-value": {
+            "translated-name": "GetLanguageValue",
+            "description": "Return the value of a particular langauge key.",
+            "params": {
+              "key": {
+                "name": "Key",
+                "desc": "Key of value"
+              }
+            }
+          },
+          "raw-questions": {
+            "translated-name": "RawQuestions",
+            "description": "Return the serialized questions."
+          },
+          "question-id": {
+            "translated-name": "QuestionId",
+            "description": "Return the ID of the current question."
+          },
+          "stem": {
+            "translated-name": "Stem",
+            "description": "Return the entire raw stem of the current question."
+          },
+          "stem-before-image": {
+            "translated-name": "StemBeforeImage",
+            "description": "Return the first part of the stem of the current question."
+          },
+          "stem-after-images": {
+            "translated-name": "StemAfterImages",
+            "description": "Return the second part of the stem of the current question."
+          },
+          "image-url": {
+            "translated-name": "ImageURL",
+            "description": "Return the image URL."
+          },
+          "alternative-1-id": {
+            "translated-name": "Alternative1Id",
+            "description": "Return the id of the 1st alternative."
+          },
+          "alternative-1-text": {
+            "translated-name": "Alternative1Text",
+            "description": "Return the text of the 1st alternative."
+          },
+          "alternative-2-id": {
+            "translated-name": "Alternative2Id",
+            "description": "Return the id of the 2nd alternative."
+          },
+          "alternative-2-text": {
+            "translated-name": "Alternative2Text",
+            "description": "Return the text of the 2nd alternative."
+          },
+          "alternative-3-id": {
+            "translated-name": "Alternative3Id",
+            "description": "Return the id of the 3rd alternative."
+          },
+          "alternative-3-text": {
+            "translated-name": "Alternative3Text",
+            "description": "Return the text of the 3rd alternative."
+          },
+          "alternative-4-id": {
+            "translated-name": "Alternative4Id",
+            "description": "Return the id of the 4th alternative."
+          },
+          "alternative-4-text": {
+            "translated-name": "Alternative4Text",
+            "description": "Return the text of the 4th alternative."
+          },
+          "correct-alternative-id": {
+            "translated-name": "CorrectAlternativeId",
+            "description": "Return the id of thecorrect alternative."
+          }
+        }
+      }
+    }
+  }
+}

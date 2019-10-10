@@ -1,0 +1,326 @@
+{
+  "lifecycle": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "load-progress",
+        "scriptName": "LoadProgress",
+        "highlight": false,
+        "params": [
+          {
+            "id": "load-progress",
+            "type": "any"
+          }
+        ]
+      },
+      {
+        "id": "complete-game",
+        "scriptName": "CompleteGame",
+        "highlight": false
+      },
+      {
+        "id": "game-is-ready",
+        "scriptName": "GameIsReady",
+        "highlight": false,
+        "params": [
+          {
+            "id": "resolution",
+            "type": "string",
+            "initialValue": "1024x574"
+          },
+          {
+            "id": "aspect-ratio",
+            "type": "string",
+            "initialValue": "16:9"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "general": {
+    "conditions": [
+      {
+        "id": "game-paused",
+        "scriptName": "GamePaused",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "game-resumed",
+        "scriptName": "GameResumed",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "progress",
+        "scriptName": "Progress",
+        "highlight": false,
+        "params": [
+          {
+            "id": "progress",
+            "type": "number"
+          },
+          {
+            "id": "max-progress",
+            "type": "number"
+          },
+          {
+            "id": "score",
+            "type": "number",
+            "initialValue": "0"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "questions": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "answer-question",
+        "scriptName": "AnswerQuestion",
+        "highlight": false,
+        "params": [
+          {
+            "id": "answer-id",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "speak-questions",
+        "scriptName": "SpeakQuestions",
+        "highlight": false,
+        "params": [
+          {
+            "id": "question-id",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "speak-answers",
+        "scriptName": "SpeakAnswers",
+        "highlight": false,
+        "params": [
+          {
+            "id": "answer-id",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "speak-question-and-answers",
+        "scriptName": "SpeakQuestionAndAnswers",
+        "highlight": false,
+        "params": [
+          {
+            "id": "question-id",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "raw-questions",
+        "expressionName": "RawQuestions",
+        "returnType": "string"
+      },
+      {
+        "id": "question-id",
+        "expressionName": "QuestionId",
+        "returnType": "string"
+      },
+      {
+        "id": "stem",
+        "expressionName": "Stem",
+        "returnType": "string"
+      },
+      {
+        "id": "stem-before-image",
+        "expressionName": "StemBeforeImage",
+        "returnType": "string"
+      },
+      {
+        "id": "stem-after-images",
+        "expressionName": "StemAfterImages",
+        "returnType": "string"
+      },
+      {
+        "id": "image-url",
+        "expressionName": "ImageURL",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-1-id",
+        "expressionName": "Alternative1Id",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-1-text",
+        "expressionName": "Alternative1Text",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-2-id",
+        "expressionName": "Alternative2Id",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-2-text",
+        "expressionName": "Alternative2Text",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-3-id",
+        "expressionName": "Alternative3Id",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-3-text",
+        "expressionName": "Alternative3Text",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-4-id",
+        "expressionName": "Alternative4Id",
+        "returnType": "string"
+      },
+      {
+        "id": "alternative-4-text",
+        "expressionName": "Alternative4Text",
+        "returnType": "string"
+      },
+      {
+        "id": "correct-alternative-id",
+        "expressionName": "CorrectAlternativeId",
+        "returnType": "string"
+      }
+    ]
+  },
+  "speak": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "speak-text",
+        "scriptName": "SpeakText",
+        "highlight": false,
+        "params": [
+          {
+            "id": "text-key",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "audio": {
+    "conditions": [],
+    "actions": [
+      {
+        "id": "play-sound",
+        "scriptName": "PlaySound",
+        "highlight": false,
+        "params": [
+          {
+            "id": "background",
+            "type": "combo",
+            "initialValue": "false",
+            "items": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "id": "looping",
+            "type": "combo",
+            "initialValue": "false",
+            "items": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "id": "filename",
+            "type": "any"
+          }
+        ]
+      },
+      {
+        "id": "stop-sound",
+        "scriptName": "StopSound",
+        "highlight": false,
+        "params": [
+          {
+            "id": "filename",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "configure-sound",
+        "scriptName": "ConfigureSound",
+        "highlight": false,
+        "params": [
+          {
+            "id": "fade",
+            "type": "number",
+            "initialValue": "0.2"
+          },
+          {
+            "id": "background",
+            "type": "number",
+            "initialValue": "0.5"
+          },
+          {
+            "id": "foreground",
+            "type": "number",
+            "initialValue": "0.6"
+          }
+        ]
+      }
+    ],
+    "expressions": []
+  },
+  "payloads": {
+    "conditions": [
+      {
+        "id": "language-data-received",
+        "scriptName": "LanguageDataReceived",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "questions-data-received",
+        "scriptName": "QuestionsDataReceived",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [],
+    "expressions": []
+  },
+  "language": {
+    "conditions": [],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "get-language-value",
+        "expressionName": "GetLanguageValue",
+        "returnType": "string",
+        "params": [
+          {
+            "id": "key",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
