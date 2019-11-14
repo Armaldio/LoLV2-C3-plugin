@@ -20,22 +20,22 @@
         "conditions": {
           "language-data-received": {
             "list-name": "Language Data Received",
-            "display-text": "On <b>Language</b>",
+            "display-text": "On Language",
             "description": "Language loaded from server, store it in a dictionary"
           },
           "questions-data-received": {
             "list-name": "Questions Data Received",
-            "display-text": "On <b>Questions</b>.",
+            "display-text": "On Questions.",
             "description": "Questions have been received from the server."
           },
           "game-paused": {
             "list-name": "Game Paused",
-            "display-text": "On <b>Pause</b>.",
+            "display-text": "On Pause.",
             "description": "LOL Platfrom has requested pause."
           },
           "game-resumed": {
             "list-name": "Game Resumed",
-            "display-text": "On <b>Resume</b>.",
+            "display-text": "On Resume.",
             "description": "LOL Platform has requested resume."
           }
         },
