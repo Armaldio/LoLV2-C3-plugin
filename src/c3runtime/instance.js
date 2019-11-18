@@ -85,8 +85,9 @@
 
                 if (msg.data.messageName == "language")
                 {
+                    console.log('on language received');
                     this.langData.lang = JSON.parse(msg.data.payload);
-                    this.Trigger(C3.Plugins.LoLv2.Cnds.OnLanguage)
+                    this.Trigger(C3.Plugins.LoLv2.Cnds.LanguageDataReceived)
                 }
 
                 if (msg.data.messageName == "questions")
@@ -96,17 +97,17 @@
 
                     this.propagateQuestions(tq.questions);
 
-                    this.Trigger(C3.Plugins.LoLv2.Cnds.OnQuestions)
+                    this.Trigger(C3.Plugins.LoLv2.Cnds.QuestionsDataReceived)
                 }
 
                 if (msg.data.messageName == "pause")
                 {
-                    this.Trigger(C3.Plugins.LoLv2.Cnds.OnPause)
+                    this.Trigger(C3.Plugins.LoLv2.Cnds.GamePaused)
                 }
 
                 if (msg.data.messageName == "resume")
                 {
-                    this.Trigger(C3.Plugins.LoLv2.Cnds.OnResume)
+                    this.Trigger(C3.Plugins.LoLv2.Cnds.GameResumed)
                 }
             });
 
