@@ -2,7 +2,7 @@
 {
 
     const PLUGIN_ID = "LoLv2";
-    const PLUGIN_VERSION = "1.1.0.0";
+    const PLUGIN_VERSION = "1.2.0.0";
     const PLUGIN_CATEGORY = "general";
 
     const PLUGIN_CLASS = SDK.Plugins.LoLv2 = class LolV2Plugin extends SDK.IPluginBase
